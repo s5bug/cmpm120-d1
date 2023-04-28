@@ -1,0 +1,23 @@
+Among Us
+• "Round Start" sound effect
+  Modified: distorted, slowed
+
+Bradeazy
+• "Trade Offer" image
+  Modified: background removed
+
+Geoffrey Lee
+• "Impact" font family
+
+SimpleFlips
+• "ONE" voice clip
+  Modified: reverb added
+
+Twemoji
+• Tropical Fish emoji
+• Flushed Face emoji
+  Modified: combined into one emoji
+
+Unknown
+• "time for another week" image
+  Modified: background removed, border added

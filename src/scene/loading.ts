@@ -12,7 +12,7 @@ import FitnessgramText from '../assets/fitnessgram.txt';
 
 import AmongusSound from '../assets/amongus.wav';
 import OneSound from '../assets/one.wav';
-import PolyrhythmSound from '../assets/polyrhythm.wav';
+import PolyrhythmSound from '../assets/polyrhythm.mp3';
 
 const bar_width = 400;
 const bar_height = 50;

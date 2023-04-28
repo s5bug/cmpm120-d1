@@ -3,10 +3,12 @@ import 'phaser';
 import AnotherWeekImage from '../assets/anotherweek.png';
 import FisjEnterprisesImage from '../assets/fisjenterprises.png';
 import FlishedImage from '../assets/flished.png';
+import TradeOfferImage from '../assets/tradeoffer.png';
 
 import ImpactFont from '../assets/Impact-Regular.ttf';
 
 import CreditsText from '../assets/credits.txt';
+import FitnessgramText from '../assets/fitnessgram.txt';
 
 import AmongusSound from '../assets/amongus.wav';
 import OneSound from '../assets/one.wav';
@@ -60,11 +62,13 @@ export default class LoadingScene extends Phaser.Scene {
         this.load.image('anotherweek', AnotherWeekImage)
         this.load.image('fisjenterprises', FisjEnterprisesImage)
         this.load.image('flished', FlishedImage)
+        this.load.image('tradeoffer', TradeOfferImage)
 
         // @ts-ignore
         this.load.ttf('impact', ImpactFont)
 
         this.load.text('credits', CreditsText)
+        this.load.text('fitnessgram', FitnessgramText)
 
         this.load.audio('amongus', AmongusSound)
         this.load.audio('one', OneSound)

@@ -6,9 +6,6 @@ export default class CreditsScene extends Phaser.Scene {
     }
 
     create() {
-        const screen_width = this.game.config.width as number;
-        const screen_height = this.game.config.height as number;
-
         let heading = "Credits"
         let body = this.cache.text.get('credits')
 
@@ -17,32 +14,25 @@ export default class CreditsScene extends Phaser.Scene {
             16,
             heading,
             {
-                fontSize: 48
+                fontSize: 96
             }
         )
 
         let bodyText = this.add.text(
             headingText.x,
-            headingText.y + headingText.displayHeight + 16,
+            headingText.y + headingText.height + 16,
             body,
         )
-        bodyText;
 
-        let nextSlideProgress = this.add.rectangle(
-            16,
-            screen_height - 16,
-            screen_width - 32,
-            1,
-            0x00FF00
+        this.add.text(
+            bodyText.x,
+            bodyText.y + bodyText.height + 16,
+            "Click to continue",
+            {
+                fontSize: 48,
+                color: "#00FF00"
+            }
         )
-        nextSlideProgress.setOrigin(0, 1)
-
-        this.tweens.add({
-            targets: nextSlideProgress,
-            width: 0,
-            duration: 5000,
-            onComplete: () => this.scene.start('company')
-        })
 
         this.input.on('pointerdown', () => this.scene.start('company'))
     }

@@ -12,6 +12,7 @@ import FitnessgramText from '../assets/fitnessgram.txt';
 
 import AmongusSound from '../assets/amongus.wav';
 import OneSound from '../assets/one.wav';
+import PolyrhythmSound from '../assets/polyrhythm.wav';
 
 const bar_width = 400;
 const bar_height = 50;
@@ -72,6 +73,7 @@ export default class LoadingScene extends Phaser.Scene {
 
         this.load.audio('amongus', AmongusSound)
         this.load.audio('one', OneSound)
+        this.load.audio('polyrhythm', PolyrhythmSound)
     }
 
     create() {

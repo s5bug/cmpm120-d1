@@ -12,15 +12,11 @@ export default class MenuScene extends Phaser.Scene {
         let tradeOffer = this.add.sprite(32, screen_height, 'tradeoffer')
         tradeOffer.setOrigin(0.0, 0.0)
 
-        this.tweens.chain({
+        this.tweens.add({
             targets: tradeOffer,
-            tweens: [
-                {
-                    y: screen_height - tradeOffer.height,
-                    ease: Phaser.Math.Easing.Elastic.Out,
-                    duration: 1000,
-                }
-            ]
+            y: screen_height - tradeOffer.height,
+            ease: Phaser.Math.Easing.Elastic.Out,
+            duration: 1000
         })
 
         let fitnessgramText = this.add.text(
@@ -35,14 +31,20 @@ export default class MenuScene extends Phaser.Scene {
         )
         fitnessgramText.setWordWrapWidth((screen_width / 2) - 32)
 
-        this.tweens.chain({
+        this.tweens.add({
             targets: fitnessgramText,
-            tweens: [
-                {
-                    x: screen_width / 2,
-                    duration: 1000
-                }
-            ]
+            x: screen_width / 2,
+            duration: 1000
+        })
+
+        let polyrhythmSound = this.sound.add('polyrhythm', { volume: 0.0 })
+        polyrhythmSound.loop = true
+        this.tweens.add({
+            targets: polyrhythmSound,
+            volume: { from: 0.0, to: 1.0 },
+            duration: 500.0,
+            ease: Phaser.Math.Easing.Expo.In,
+            onStart: () => polyrhythmSound.play()
         })
     }
 }
